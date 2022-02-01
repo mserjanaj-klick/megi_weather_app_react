@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Forecast from "../src/components/weather/Forecast";
+import Footer from "../src/components/global/Footer";
+// import MainNavigation from "./components/layout/MainNavigation";
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {/* <MainNavigation /> */}
+      {/* <Routes>
+        <Route path="/" element={Home}>Home</Route>
+        <Route path="/weather" element={Weather}>Weather</Route>
+      </Routes> */}
+      {/* <div>
+        {weather.map((forecast) => (
+          <div key={forecast.name}></div>
+        ))}
+      </div> */}
+      <Forecast/>
     </div>
   );
 }
 
 export default App;
+
+// api.openweathermap.org/data/2.5/weather?units=metric&q=Tirana&appid=279e23feb5d5ba66db977ea5a476b051
