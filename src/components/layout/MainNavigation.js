@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+/* import { Link, NavLink } from "react-router-dom";
 import Home from "../../pages/Home";
 import Weather from "../../pages/Weather";
 
@@ -20,3 +20,4 @@ function MainNavigation() {
 }
 
 export default MainNavigation;
+ */

@@ -1,11 +1,12 @@
 import React from "react";
-// import Footer from "../src/components/global/Footer";
 import MainNavigation from "./components/layout/MainNavigation";
+import Forecast from "../src/components/weather/Forecast";
 
 function App() {
   return (
     <div className="app">
-      <MainNavigation />
+      {/* <MainNavigation /> */}
+      <Forecast />
     </div>
   );
 }
@@ -13,3 +14,5 @@ function App() {
 export default App;
 
 // api.openweathermap.org/data/2.5/weather?units=metric&q=Tirana&appid=279e23feb5d5ba66db977ea5a476b051
+
+//background-image: linear-gradient(to bottom right, );
