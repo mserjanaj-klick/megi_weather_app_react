@@ -1,23 +1,11 @@
 import React from "react";
-import Forecast from "../src/components/weather/Forecast";
-import Footer from "../src/components/global/Footer";
-// import MainNavigation from "./components/layout/MainNavigation";
+// import Footer from "../src/components/global/Footer";
+import MainNavigation from "./components/layout/MainNavigation";
 
 function App() {
-
   return (
     <div className="app">
-      {/* <MainNavigation /> */}
-      {/* <Routes>
-        <Route path="/" element={Home}>Home</Route>
-        <Route path="/weather" element={Weather}>Weather</Route>
-      </Routes> */}
-      {/* <div>
-        {weather.map((forecast) => (
-          <div key={forecast.name}></div>
-        ))}
-      </div> */}
-      <Forecast/>
+      <MainNavigation />
     </div>
   );
 }

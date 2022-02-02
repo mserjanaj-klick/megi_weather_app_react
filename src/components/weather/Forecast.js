@@ -13,8 +13,8 @@ export default function Forecast() {
   }, [search]);
 
   return (
-    <div className="weather">
-      <div className="mx-auto my-0 w-5/12 h-[60rem] opacity-80">
+    <div className="forecast">
+      <div className="mx-auto my-8 w-4/12 h-[50rem] bg-blue opacity-80 rounded-2xl">
         <div className="">
           <input
             className="mx-auto my-0 border-4"
@@ -25,11 +25,11 @@ export default function Forecast() {
           />
         </div>
         {!city ? (
-          <p>No data found!</p>
+          <p className="text-white">No data found!</p>
         ) : (
           <div>
-            <div className="">
-              <h1>
+            <div className="text-white">
+              <h1 className="">
                 <span>{search}</span>
                 <span>
                   <sup>{city.sys.country}</sup>
