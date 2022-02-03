@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import moment from "moment";
 import "../../assets/styles/customstyles/forecast.scss";
 // import Search from "./Search";
 // import Weather from "./Weather";
@@ -21,7 +22,7 @@ export default function Forecast() {
 
   useEffect(() => {
     getWeather();
-  }, [search]); */
+  }, [search]);  */
 
   useEffect(() => {
     axios
@@ -29,7 +30,6 @@ export default function Forecast() {
         `https://api.openweathermap.org/data/2.5/weather?q=${search}&appid=a2bd3f9f0b9eea7c0aa1803544a2168a&units=metric`
       )
       .then((res) => {
-        // const response = res.data;
         setCity(res.data);
       });
   });
@@ -38,7 +38,7 @@ export default function Forecast() {
     <div className="forecast animate__animated animate__fadeInDown">
       <div
         id="forecast-card"
-        className="mx-auto my-8 w-[90%] md:w-[40%] lg:w-3/12 h-[40rem] lg:h-[50rem] bg-blue opacity-80 rounded-2xl"
+        className="mx-auto my-8 w-[90%] md:w-[40%] lg:w-3/12 h-[40rem] lg:h-[50rem] rounded-2xl"
       >
         <div className="flex justify-center">
           <input
@@ -58,12 +58,15 @@ export default function Forecast() {
         ) : (
           <div className="mx-auto flex justify-center">
             <div id="info" className="text-white">
+              <p>Day:&nbsp;{moment().format("dddd")}</p>
+              <p>Date:&nbsp;{moment().format("LL")}</p>
               <h1 className="my-8 text-4xl animate__animated animate__fadeIn">
                 <span className="capitalize">{search}</span>&nbsp;
                 <span className="uppercase">
                   <sup>{city.sys.country}</sup>
                 </span>
               </h1>
+              <img src={city.weather[0].icon} alt="weather icon" />
               <p className="mt-8 mb-4 text-center text-3xl animate__animated animate__fadeIn">
                 {Math.round(city.main.temp)}&deg;C
               </p>

@@ -1,6 +1,11 @@
 @import "animate.css";
 
 #forecast-card {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(24, 24, 105),
+    rgb(114, 172, 194)
+  );
   input[type="search"] {
     border: 1px solid rgba(231, 231, 231, 0.5);
     border-radius: 5px;
