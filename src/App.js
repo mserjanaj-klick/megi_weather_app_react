@@ -12,5 +12,3 @@ function App() {
 }
 
 export default App;
-
-// api.openweathermap.org/data/2.5/weather?units=metric&q=Tirana&appid=279e23feb5d5ba66db977ea5a476b051
